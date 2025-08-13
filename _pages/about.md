@@ -21,10 +21,10 @@ announcements:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+# latest_posts:
+#   enabled: true
+#   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+#   limit: 3 # leave blank to include all the blog posts
 ---
 
 This is Tonmoy Hossain, a fifth-year Ph.D. in CS student and an Endowed Fellow at the University of Virginia. I am working as a Graduate Research Assistant at the MIA Lab under the supervision of [Miaomiao Zhang](https://www.cs.virginia.edu/~mz8rr/index.html). I served as the Co-chair and Graduate Program Representative at UVA CSGSG. My primary research interest lies in Computer Vision, Image Analysis and Causal Inference.
