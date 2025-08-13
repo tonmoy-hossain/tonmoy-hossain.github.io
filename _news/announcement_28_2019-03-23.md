@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Mar 23, 2019]  - Ranked 7th position at [Inter University Math Olympiad](http://tonmoy-hossain.github.io/files/Math_Olympiad.pdf)
+Ranked 7th position at [Inter University Math Olympiad](http://tonmoy-hossain.github.io/files/Math_Olympiad.pdf)

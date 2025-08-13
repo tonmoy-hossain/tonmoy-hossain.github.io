@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jun 09, 2020]  - A long paper was accepted at [ICACIE 2020](https://www.icacie.com/2020/).
+A long paper was accepted at [ICACIE 2020](https://www.icacie.com/2020/).

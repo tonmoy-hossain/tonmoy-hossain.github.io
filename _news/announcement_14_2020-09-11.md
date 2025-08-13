@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Sep 11, 2020]  - A long paper was accepted at [IEEE-IEMCON 2020](https://ieee-iemcon.org/).
+A long paper was accepted at [IEEE-IEMCON 2020](https://ieee-iemcon.org/).

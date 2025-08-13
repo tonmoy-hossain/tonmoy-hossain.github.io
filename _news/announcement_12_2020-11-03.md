@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Nov 3, 2020]  - A long paper was accepted at [ICCIT 2020](http://iccit.org.bd/2020/).
+A long paper was accepted at [ICCIT 2020](http://iccit.org.bd/2020/).

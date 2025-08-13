@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Aug 25, 2019]  - Joined as an Adjunct Lecturer in the [Department of CSE, Ahsanullah University of Science and Technology](http://aust.edu/).
+Joined as an Adjunct Lecturer in the [Department of CSE, Ahsanullah University of Science and Technology](http://aust.edu/).

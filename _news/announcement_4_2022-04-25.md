@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Apr 25, 2022]  - Reached 100+ citations on my Google Scholar profile.
+Reached 100+ citations on my Google Scholar profile.

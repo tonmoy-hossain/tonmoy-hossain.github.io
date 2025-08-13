@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jun 23, 2019]   - Successfully defended my [B.Sc. Thesis](https://tonmoy-hossain.github.io/files/Hossain_Tonmoy_B.Sc._Thesis.pdf).
+Successfully defended my [B.Sc. Thesis](https://tonmoy-hossain.github.io/files/Hossain_Tonmoy_B.Sc._Thesis.pdf).

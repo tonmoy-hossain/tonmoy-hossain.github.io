@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jan 22, 2023]  - Our paper on [Multimodal Deep Learning to Differentiate Tumor Recurrence from Treatment Effect in Human Glioblastoma](https://arxiv.org/pdf/2302.14124.pdf) was accepted at ISBI 2023.
+Our paper on [Multimodal Deep Learning to Differentiate Tumor Recurrence from Treatment Effect in Human Glioblastoma](https://arxiv.org/pdf/2302.14124.pdf) was accepted at ISBI 2023.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Apr 28, 2020]  - One paper got accepted to [Tensymp 2020](http://tensymp2020.com/).
+One paper got accepted to [Tensymp 2020](http://tensymp2020.com/).

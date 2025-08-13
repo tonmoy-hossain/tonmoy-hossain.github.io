@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Dec 19, 2019]  - Attended [ICCIT 2019](http://iccit.org.bd/2019/), in Dhaka, Bangladesh and presented a [paper](https://ieeexplore.ieee.org/document/9038609).
+Attended [ICCIT 2019](http://iccit.org.bd/2019/), in Dhaka, Bangladesh and presented a [paper](https://ieeexplore.ieee.org/document/9038609).

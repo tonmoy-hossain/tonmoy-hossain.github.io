@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Dec 21, 2019]  - A [paper](https://ieeexplore.ieee.org/document/9068847) was presented at EICT 2019.
+A [paper](https://ieeexplore.ieee.org/document/9068847) was presented at EICT 2019.

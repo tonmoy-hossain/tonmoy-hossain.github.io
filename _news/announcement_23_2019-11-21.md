@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Nov 21, 2019]  - One [paper](https://ieeexplore.ieee.org/document/9038609) got accepted to [ICCIT 2019](http://iccit.org.bd/2019/).
+One [paper](https://ieeexplore.ieee.org/document/9038609) got accepted to [ICCIT 2019](http://iccit.org.bd/2019/).

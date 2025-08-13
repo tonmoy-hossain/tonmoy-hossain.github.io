@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jan 26, 2020]  - Joined as a Lecturer in the [Department of CSE, Ahsanullah University of Science and Technology](http://aust.edu/).
+Joined as a Lecturer in the [Department of CSE, Ahsanullah University of Science and Technology](http://aust.edu/).

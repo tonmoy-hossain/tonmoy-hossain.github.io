@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Nov 9, 2020]  - One paper won the [**Best Paper Award**](https://tonmoy-hossain.github.io/files/Best_Paper_Award.png) under *Data Mining and Data Analytics and Big Data* category at [IEEE-IEMCON 2020](https://ieee-iemcon.org/).
+One paper won the [**Best Paper Award**](https://tonmoy-hossain.github.io/files/Best_Paper_Award.png) under *Data Mining and Data Analytics and Big Data* category at [IEEE-IEMCON 2020](https://ieee-iemcon.org/).

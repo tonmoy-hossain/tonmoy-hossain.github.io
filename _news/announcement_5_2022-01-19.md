@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jan 19, 2022]  - Started working as Graduate Program Representative at [UVA CSGSG](https://csgsg.org/).
+Started working as Graduate Program Representative at [UVA CSGSG](https://csgsg.org/).

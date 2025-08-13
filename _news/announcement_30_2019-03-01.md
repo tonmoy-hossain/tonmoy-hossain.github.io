@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Mar 1, 2019]  - One [journal paper](https://www.ijser.org/researchpaper/Brain-Tumor-Segmentation-Techniques-on-Medical-Images-A-Review.pdf) got accepted.
+One [journal paper](https://www.ijser.org/researchpaper/Brain-Tumor-Segmentation-Techniques-on-Medical-Images-A-Review.pdf) got accepted.
