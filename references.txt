@@ -1,0 +1,216 @@
+@article{shah2021comprehensive,
+  title={A comprehensive survey of covid-19 detection using medical images},
+  author={Shah, Faisal Muhammad and Joy, Sajib Kumar Saha and Ahmed, Farzad and Hossain, Tonmoy and Humaira, Mayeesha and Ami, Amit Saha and Paul, Shimul and Jim, Md Abidur Rahman Khan and Ahmed, Sifat},
+  journal={SN Computer Science},
+  volume={2},
+  number={6},
+  pages={434},
+  year={2021},
+  publisher={Springer Singapore Singapore}
+}
+
+@inproceedings{maitra2020graph,
+  title={Graph theory for dimensionality reduction: A case study to prognosticate parkinson's},
+  author={Maitra, Shithi and Hossain, Tonmoy and Hasib, Khan Md and Shishir, Fairuz Shadmani},
+  booktitle={2020 11th IEEE Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)},
+  pages={0134--0140},
+  year={2020},
+  organization={IEEE}
+}
+
+@inproceedings{naquib2020modified,
+  title={Modified Maximum Curvature Method (MMCM) and Logistic Regression: a hybrid architecture for finger vein biometric recognition system},
+  author={Naquib, Faizah Binte and Tabassom, Sharika and Elahee, Fariha and Mim, Farhana and Hossain, Tonmoy and Kalpoma, Kazi A},
+  booktitle={2020 23rd International Conference on Computer and Information Technology (ICCIT)},
+  pages={1--7},
+  year={2020},
+  organization={IEEE}
+}
+
+@inproceedings{seum2020comparative,
+  title={A comparative study of cnn transfer learning classification algorithms with segmentation for COVID-19 detection from CT scan images},
+  author={Seum, Ashek and Raj, Amir Hossain and Sakib, Shadman and Hossain, Tonmoy},
+  booktitle={2020 11th International Conference on Electrical and Computer Engineering (ICECE)},
+  pages={234--237},
+  year={2020},
+  organization={IEEE}
+}
+
+@article{shah2019brain,
+  title={Brain tumor segmentation techniques on medical images-a review},
+  author={Shah, Faisal Muhammad and Hossain, Tonmoy and Ashraf, Mohsena and Shishir, Fairuz Shadmani and Al Nasim, MA and Kabir, Md Hasanul},
+  journal={Int. J. Sci. Eng. Res},
+  volume={10},
+  number={2},
+  pages={1514--1525},
+  year={2019}
+}
+
+@incollection{hossain2021skeleton,
+  title={Skeleton-based human action recognition on large-scale datasets},
+  author={Hossain, Tonmoy and Sarker, Sujan and Rahman, Sejuti and Ahad, Md Atiqur Rahman},
+  booktitle={Vision, Sensing and Analytics: Integrative Approaches},
+  pages={125--146},
+  year={2021},
+  publisher={Springer International Publishing Cham}
+}
+
+@inproceedings{hossain2019novel,
+  title={A novel approach to classify bangla sign digits using capsule network},
+  author={Hossain, Tonmoy and Shishir, Fairuz Shadmani and Shah, Faisal Muhammad},
+  booktitle={2019 22nd International Conference on Computer and Information Technology (ICCIT)},
+  pages={1--6},
+  year={2019},
+  organization={IEEE}
+}
+
+@inproceedings{elahee2020comparative,
+  title={Comparative Study of Deep Learning Based Finger Vein Biometric Authentication Systems},
+  author={Elahee, Fariha and Mim, Farhana and Naquib, Faizah Binte and Tabassom, Sharika and Hossain, Tonmoy and Kalpoma, Kazi A},
+  booktitle={2020 2nd International Conference on Advanced Information and Communication Technology (ICAICT)},
+  pages={444--448},
+  year={2020},
+  organization={IEEE}
+}
+
+@article{islam2021exploring,
+  title={Exploring video captioning techniques: A comprehensive survey on deep learning methods},
+  author={Islam, Saiful and Dash, Aurpan and Seum, Ashek and Raj, Amir Hossain and Hossain, Tonmoy and Shah, Faisal Muhammad},
+  journal={SN Computer Science},
+  volume={2},
+  number={2},
+  pages={1--28},
+  year={2021},
+  publisher={Springer Singapore}
+}
+
+@inproceedings{hossain2019brain,
+  title={Brain tumor detection using convolutional neural network},
+  author={Hossain, Tonmoy and Shishir, Fairuz Shadmani and Ashraf, Mohsena and Al Nasim, MD Abdullah and Shah, Faisal Muhammad},
+  booktitle={2019 1st international conference on advances in science, engineering and robotics technology (ICASERT)},
+  pages={1--6},
+  year={2019},
+  organization={IEEE}
+}
+
+@incollection{maitra2021apriori,
+  title={Apriori-backed fuzzy unification and statistical inference in feature reduction: An application in prognosis of autism in toddlers},
+  author={Maitra, Shithi and Akter, Nasrin and Zahan Mithila, Afrina and Hossain, Tonmoy and Shafiul Alam, Mohammad},
+  booktitle={Progress in Advanced Computing and Intelligent Engineering: Proceedings of ICACIE 2020},
+  pages={233--254},
+  year={2021},
+  publisher={Springer Singapore Singapore}
+}
+
+@inproceedings{shishir2020esharagan,
+  title={Esharagan: An approach to generate disentangle representation of sign language using infogan},
+  author={Shishir, Fairuz Shadmani and Hossain, Tonmoy and Shah, Faisal Muhammad},
+  booktitle={2020 IEEE Region 10 Symposium (TENSYMP)},
+  pages={1383--1386},
+  year={2020},
+  organization={IEEE}
+}
+
+@article{ahmed2021automated,
+  title={Automated covid-19 detection from chest x-ray images: a high-resolution network (hrnet) approach},
+  author={Ahmed, Sifat and Hossain, Tonmoy and Hoque, Oishee Bintey and Sarker, Sujan and Rahman, Sejuti and Shah, Faisal Muhammad},
+  journal={SN computer science},
+  volume={2},
+  number={4},
+  pages={294},
+  year={2021},
+  publisher={Springer Singapore Singapore}
+}
+
+@incollection{sarker2021skeleton,
+  title={Skeleton-based activity recognition: Preprocessing and approaches},
+  author={Sarker, Sujan and Rahman, Sejuti and Hossain, Tonmoy and Faiza Ahmed, Syeda and Jamal, Lafifa and Ahad, Md Atiqur Rahman},
+  booktitle={Contactless Human Activity Analysis},
+  pages={43--81},
+  year={2021},
+  publisher={Springer International Publishing Cham}
+}
+
+@article{maitra2019gender,
+  title={A Gender-neutral Approach to Detect Early Alzheimer’s Disease Applying a Three-layer NN},
+  author={Maitra, Shithi and Hossain, Tonmoy and Al-Sakin, Abdullah and Inzamamuzzaman, Sheikh and Rashid, Md Mamun Or and Syeda, Shabnam Hasan},
+  journal={International Journal of Advanced Computer Science and Applications},
+  volume={10},
+  number={3},
+  year={2019},
+  publisher={Science and Information (SAI) Organization Limited}
+}
+
+@inproceedings{maitra2019artificial,
+  title={Artificial Prognosis of Cardiac Disease using an NN: A Data-scientific Approach in Outlier Handling},
+  author={Maitra, Shithi and Hosain, Tonmoy and Al-Sakin, Abdullah and Shah, Faisal Muhammad},
+  booktitle={2019 4th International Conference on Electrical Information and Communication Technology (EICT)},
+  pages={1--12},
+  year={2019},
+  organization={IEEE}
+}
+
+@inproceedings{jayakumar2023sadir,
+  title={SADIR: shape-aware diffusion models for 3D image reconstruction},
+  author={Jayakumar, Nivetha and Hossain, Tonmoy and Zhang, Miaomiao},
+  booktitle={International workshop on shape in medical imaging},
+  pages={287--300},
+  year={2023},
+  organization={Springer Nature Switzerland Cham}
+}
+
+@inproceedings{hossain2023multimodal,
+  title={Multimodal Deep Learning to Differentiate Tumor Recurrence from Treatment Effect in Human Glioblastoma},
+  author={Hossain, Tonmoy and Qureshi, Zoraiz and Jayakumar, Nivetha and Muttikkal, Thomas Eluvathingal and Patel, Sohil and Schiff, David and Zhang, Miaomiao and Kundu, Bijoy},
+  booktitle={2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--4},
+  year={2023},
+  organization={IEEE}
+}
+
+@inproceedings{jayakumar2023activation,
+  title={Activation From Sparse 2D Cardiac MRIs},
+  author={Jayakumar, Nivetha and Xing, Jiarui and Hossain, Tonmoy and Epstein, Fred and Bilchick, Kenneth and Zhang, Miaomiao},
+  booktitle={Machine Learning for Health (ML4H)},
+  pages={190--200},
+  year={2023},
+  organization={PMLR}
+}
+
+@inproceedings{hossain2024invariant,
+  title={Invariant Shape Representation Learning For Image Classification},
+  author={Hossain, Tonmoy and Ma, Jing and Li, Jundong and Zhang, Miaomiao},
+  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision. 2025},
+  pages={arXiv--preprint},
+  year={2024}
+}
+
+@article{hossain2025mgaug,
+  title={Mgaug: Multimodal geometric augmentation in latent spaces of image deformations},
+  author={Hossain, Tonmoy and Zhang, Miaomiao},
+  journal={Medical Image Analysis},
+  volume={102},
+  pages={103540},
+  year={2025},
+  publisher={Elsevier}
+}
+
+@article{jayakumar2024tpie,
+  title={TPIE: Topology-Preserved Image Editing With Text Instructions},
+  author={Jayakumar, Nivetha and Gadila, Srivardhan Reddy and Hossain, Tonmoy and Ji, Yangfeng and Zhang, Miaomiao},
+  journal={arXiv preprint arXiv:2411.16714},
+  year={2024}
+}
+
+@article{hossaintorl,
+  title={ToRL: Topology-preserving Representation Learning Of Object Deformations From Images},
+  author={Hossain, Tonmoy and Zhang, Miaomiao}
+}
+
+@inproceedings{hossain2025corld,
+  title={CoRLD: Contrastive Representation Learning Of Deformable Shapes In Images},
+  author={Hossain, Tonmoy and Zhang, Miaomiao},
+  booktitle={International Conference on Information Processing in Medical Imaging (IPMI), 2025},
+  pages={arXiv--preprint},
+  year={2025}
+}
