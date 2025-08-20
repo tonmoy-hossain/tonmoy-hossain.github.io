@@ -150,3 +150,27 @@
   abstract={Geometric shape features have been widely used as strong predictors for image classification. Nevertheless, most existing classifiers such as deep neural networks (DNNs) directly leverage the statistical correlations between these shape features and target variables. However, these correlations can often be spurious and unstable across different environments (e.g., in different age groups, certain types of brain changes have unstable relations with neurodegenerative disease); hence leading to biased or inaccurate predictions. In this paper, we introduce a novel framework that for the first time develops invariant shape representation learning (ISRL) to further strengthen the robustness of image classifiers. In contrast to existing approaches that mainly derive features in the image space, our model ISRL is designed to jointly capture invariant features in latent shape spaces parameterized by deformable transformations. To achieve this goal, we develop a new learning paradigm based on invariant risk minimization (IRM) to learn invariant representations of image and shape features across multiple training distributions/environments. By embedding the features that are invariant with regard to target variables in different environments, our model consistently offers more accurate predictions. We validate our method by performing classification tasks on both simulated 2D images, real 3D brain and cine cardiovascular magnetic resonance images (MRIs).},
   abbr={WACV}
 }
+
+@inproceedings{jayakumar2023activation,
+  bibtex_show={true},
+  title={Diffusion Models To Predict 3D Late Mechanical Activation From Sparse 2D Cardiac MRIs},
+  author={Jayakumar, Nivetha and Xing, Jiarui and Hossain, Tonmoy and Epstein, Fred and Bilchick, Kenneth and Zhang, Miaomiao},
+  booktitle={Machine Learning for Health (ML4H)},
+  pages={190--200},
+  year={2023},
+  organization={PMLR},
+  abstract={Identifying regions of late mechanical activation (LMA) of the left ventricular (LV) myocardium is critical in determining the optimal pacing site for cardiac resynchronization therapy in patients with heart failure. Several deep learning-based approaches have been developed to predict 3D LMA maps of LV myocardium from a stack of sparse 2D cardiac magnetic resonance imaging (MRIs). However, these models often loosely consider the geometric shape structure of the myocardium. This makes the reconstructed activation maps suboptimal; hence leading to a reduced accuracy of predicting the late activating regions of hearts. In this paper, we propose to use shape-constrained diffusion models to better reconstruct a 3D LMA map, given a limited number of 2D cardiac MRI slices. In contrast to previous methods that primarily rely on spatial correlations of image intensities for 3D reconstruction, our model leverages object shape as priors learned from the training data to guide the reconstruction process. To achieve this, we develop a joint learning network that simultaneously learns a mean shape under deformation models. Each reconstructed image is then considered as a deformed variant of the mean shape. To validate the performance of our model, we train and test the proposed framework on a publicly available mesh dataset of 3D myocardium and compare it with state-of-the-art deep learning-based reconstruction models. Experimental results show that our model achieves superior performance in reconstructing the 3D LMA maps as compared to the state-of-the-art models.},
+  abbr={ML4H}
+}
+
+@inproceedings{hossain2023multimodal,
+  bibtex_show={true},
+  title={Multimodal Deep Learning to Differentiate Tumor Recurrence from Treatment Effect in Human Glioblastoma},
+  author={Hossain, Tonmoy and Qureshi, Zoraiz and Jayakumar, Nivetha and Muttikkal, Thomas Eluvathingal and Patel, Sohil and Schiff, David and Zhang, Miaomiao and Kundu, Bijoy},
+  booktitle={2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--4},
+  year={2023},
+  organization={IEEE},
+  abbr={ISBI},
+  abstract={Differentiating tumor progression (TP) from treatment-related necrosis (TN) is critical for clinical management decisions in glioblastoma (GBM). Dynamic FDG PET (dPET), an advance from traditional static FDG PET, may prove advantageous in clinical staging. dPET includes novel methods of a model-corrected blood input function that accounts for partial volume averaging to compute parametric maps that reveal kinetic information. In a preliminary study, a convolution neural network (CNN) was trained to predict classification accuracy between TP and TN for 35 brain tumors from 26 subjects in the PET-MR image space. 3D parametric PET Ki (from dPET), traditional static PET standardized uptake values (SUV), and also the brain tumor MR voxels formed the input for the CNN. The average test accuracy across all leave-one-out cross-validation iterations adjusting for class weights was 0.56 using only the MR, 0.65 using only the SUV, and 0.71 using only the Ki voxels. Combining SUV and MR voxels increased the test accuracy to 0.62. On the other hand, MR and Ki voxels increased the test accuracy to 0.74. Thus, dPET features alone or with MR features in deep learning models would enhance prediction accuracy in differentiating TP vs TN in GBM.}
+}
