@@ -167,10 +167,48 @@
   bibtex_show={true},
   title={Multimodal Deep Learning to Differentiate Tumor Recurrence from Treatment Effect in Human Glioblastoma},
   author={Hossain, Tonmoy and Qureshi, Zoraiz and Jayakumar, Nivetha and Muttikkal, Thomas Eluvathingal and Patel, Sohil and Schiff, David and Zhang, Miaomiao and Kundu, Bijoy},
-  booktitle={2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
+  booktitle={IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
   pages={1--4},
   year={2023},
   organization={IEEE},
   abbr={ISBI},
   abstract={Differentiating tumor progression (TP) from treatment-related necrosis (TN) is critical for clinical management decisions in glioblastoma (GBM). Dynamic FDG PET (dPET), an advance from traditional static FDG PET, may prove advantageous in clinical staging. dPET includes novel methods of a model-corrected blood input function that accounts for partial volume averaging to compute parametric maps that reveal kinetic information. In a preliminary study, a convolution neural network (CNN) was trained to predict classification accuracy between TP and TN for 35 brain tumors from 26 subjects in the PET-MR image space. 3D parametric PET Ki (from dPET), traditional static PET standardized uptake values (SUV), and also the brain tumor MR voxels formed the input for the CNN. The average test accuracy across all leave-one-out cross-validation iterations adjusting for class weights was 0.56 using only the MR, 0.65 using only the SUV, and 0.71 using only the Ki voxels. Combining SUV and MR voxels increased the test accuracy to 0.62. On the other hand, MR and Ki voxels increased the test accuracy to 0.74. Thus, dPET features alone or with MR features in deep learning models would enhance prediction accuracy in differentiating TP vs TN in GBM.}
+}
+
+@inproceedings{jayakumar2023sadir,
+  bibtex_show={true},
+  title={SADIR: shape-aware diffusion models for 3D image reconstruction},
+  author={Jayakumar, Nivetha and Hossain, Tonmoy and Zhang, Miaomiao},
+  booktitle={MICCAI ShapeMI workshop 2023},
+  pages={287--300},
+  year={2023},
+  organization={Springer Nature Switzerland Cham},
+  abstract={3D image reconstruction from a limited number of 2D images has been a long-standing challenge in computer vision and image analysis. While deep learning-based approaches have achieved impressive performance in this area, existing deep networks often fail to effectively utilize the shape structures of objects presented in images. As a result, the topology of reconstructed objects may not be well preserved, leading to the presence of artifacts such as discontinuities, holes, or mismatched connections between different parts. In this paper, we propose a shape-aware network based on diffusion models for 3D image reconstruction, named SADIR, to address these issues. In contrast to previous methods that primarily rely on spatial correlations of image intensities for 3D reconstruction, our model leverages shape priors learned from the training data to guide the reconstruction process. To achieve this, we develop a joint learning network that simultaneously learns a mean shape under deformation models. Each reconstructed image is then considered as a deformed variant of the mean shape. We validate our model, SADIR, on both brain and cardiac magnetic resonance images (MRIs). Experimental results show that our method outperforms the baselines with lower reconstruction error and better preservation of the shape structure of objects within the images.},
+  abbr={MICCAI ShapeMI}
+}
+
+
+@article{maitra2019gender,
+  bibtex_show={true},
+  title={A Gender-neutral Approach to Detect Early Alzheimer’s Disease Applying a Three-layer NN},
+  author={Maitra, Shithi and Hossain, Tonmoy and Al-Sakin, Abdullah and Inzamamuzzaman, Sheikh and Rashid, Md Mamun Or and Syeda, Shabnam Hasan},
+  journal={International Journal of Advanced Computer Science and Applications},
+  volume={10},
+  number={3},
+  year={2019},
+  publisher={Science and Information (SAI) Organization Limited},
+  abbr={IJACSA Journal},
+  abstract={Early diagnosis of the neurodegenerative, irreversible disease Alzheimer’s is crucial for effective disease management. Dementia from Alzheimer’s is an agglomerated result of complex criteria taking roots at both medical, social, educational backgrounds. There being multiple predictive features for the mental state of a subject, machine learning methodologies are ideal for classification due to their extremely powerful featurelearning capabilities. This study primarily attempts to classify subjects as having or not having the early symptoms of the disease and on the sidelines, endeavors to detect if a subject has already transformed towards Alzheimer’s. The research utilizes the OASIS (Open Access Series of Imaging Studies) longitudinal dataset which has a uniform distribution of demented, nondemented subjects and establishes the use of novel features such as socio-economic status and educational background for early detection of dementia, proven by performing exploratory data analysis. This research exploits three data-engineered versions of the OASIS dataset with one eliminating the incomplete cases, another one with synthetically imputed data and lastly, one that eliminates gender as a feature—eventually producing the best results and making the model a gender-neutral unique piece. The neural network applied is of three layers with two ReLU hidden layers and a third softmax classification layer. The best accuracy of 86.49% obtained on cross-validation set upon trained parameters is greater than traditional learning algorithms applied previously on the same data. Drilling down to two classes namely demented and non-demented, 100% accuracy has been remarkably achieved. Additionally, perfect recall and a precision of 0.8696 for the ‘demented’ class have been achieved. The significance of this work consists in endorsing educational, socio-economic factors as useful features and eliminating the gender-bias using a simple neural network model without the need for complete MRI tuples that can be compensated for using specialized imputation methods.}
+}
+
+@inproceedings{maitra2019artificial,
+  bibtex_show={true},
+  title={Artificial Prognosis of Cardiac Disease using an NN: A Data-scientific Approach in Outlier Handling},
+  author={Maitra, Shithi and Hosain, Tonmoy and Al-Sakin, Abdullah and Shah, Faisal Muhammad},
+  booktitle={International Conference on Electrical Information and Communication Technology (EICT)},
+  pages={1--12},
+  year={2019},
+  organization={IEEE},
+  abbr={EICT},
+  abstract={Cardiovascular diseases cause approximately one third of all yearly global deaths. Addictives and physical inactivity trigger in humans discernible syndromes such as elevated blood pressure, increased blood sugar, unhealthy levels of cholesterol, portliness, chest-pain etc. which are signs of the existence of a probable heart disease. There being multiple predictive indicators of cardiac diseases, this poses a machine-learning (ML) problem. This paper proposes a three-layer, NN-based binary classifier to prognosticate presence of heart disease utilizing UCI (University of California, Irvine) ML Heart Disease repository. The feature-space has been assembled using filtering methods that employed univariate and bivariate exploratory data analysis (EDA). Extracted features have been corroborated by inferential statistics, applying two-sample t-tests and Chi-squared ( χ2) independence tests. The research exploits different data engineering techniques-eventually raising the accuracy to an average 88.33% and to a highest 91.66%-namely, distribution specific division, natural and unnatural handling of anomalous outliers. The consistent, stepwise improvement in performance has been k-fold cross-validated and signified by performing one sample t-tests and ANOVA-tests on k=5 runs of the techniques each. The simplistic model outperformed traditional ML and provided comparable accuracy achieved by hybrid approaches in much lower computational cost by applying statistical preprocessing on data.}
 }
