@@ -57,7 +57,6 @@
   video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
   additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
   annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
   inspirehep_id = {3255}
 }
 
@@ -123,6 +122,7 @@
   publisher={IPMI},
   abstract={Deformable shape representations, parameterized by deformations relative to a given template, have proven effective for improved image analysis tasks. However, their broader applicability is hindered by two major challenges. First, existing methods mainly rely on a known template during testing, which is impractical and limits flexibility. Second, they often struggle to capture fine-grained, voxel-level distinctions between similar shapes (e.g., anatomical variations among healthy individuals, those with mild cognitive impairment, and diseased states). To address these limitations, we propose a novel framework - Contrastive Representation Learning of Deformable shapes (CoRLD) in learned deformation spaces and demonstrate its effectiveness in the context of image classification. Our CoRLD leverages a class-aware contrastive supervised learning objective in latent deformation spaces, promoting proximity among representations of similar classes while ensuring separation of dissimilar groups. In contrast to previous deep learning networks that require a reference image as input to predict deformation changes, our approach eliminates this dependency. Instead, template images are utilized solely as ground truth in the loss function during the training process, making our model more flexible and generalizable to a wide range of medical applications. We validate CoRLD on diverse datasets, including real brain magnetic resonance imaging (MRIs) and adrenal shapes derived from computed tomography (CT) scans. Experimental results show that our model effectively extracts deformable shape features, which can be easily integrated with existing classifiers to substantially boost the classification accuracy.},
   preview={CoRLD_model.png},
+  selected={true},
   abbr={IPMI}
 }
 
@@ -137,6 +137,7 @@
   abstract={Geometric transformations have been widely used to augment the size of training images. Existing methods often assume a unimodal distribution of the underlying transformations between images, which limits their power when data with multimodal distributions occur. In this paper, we propose a novel model, Multimodal Geometric Augmentation (MGAug), that for the first time generates augmenting transformations in a multimodal latent space of geometric deformations. To achieve this, we first develop a deep network that embeds the learning of latent geometric spaces of diffeomorphic transformations (a.k.a. diffeomorphisms) in a variational autoencoder (VAE). A mixture of multivariate Gaussians is formulated in the tangent space of diffeomorphisms and serves as a prior to approximate the hidden distribution of image transformations. We then augment the original training dataset by deforming images using randomly sampled transformations from the learned multimodal latent space of VAE. To validate the efficiency of our model, we jointly learn the augmentation strategy with two distinct domain-specific tasks: multi-class classification on 2D synthetic datasets and segmentation on real 3D brain magnetic resonance images (MRIs). We also compare MGAug with state-of-the-art transformation-based image augmentation algorithms. Experimental results show that our proposed approach outperforms all baselines by significantly improved prediction accuracy.},
   publisher={Elsevier},
   preview={mgaug_model.png},
+  selected={true},
   abbr={MedIA Journal}
 }
 
@@ -149,6 +150,7 @@
   year={2025},
   organization={IEEE},
   preview={isrl_model.png},
+  selected={true},
   abstract={Geometric shape features have been widely used as strong predictors for image classification. Nevertheless, most existing classifiers such as deep neural networks (DNNs) directly leverage the statistical correlations between these shape features and target variables. However, these correlations can often be spurious and unstable across different environments (e.g., in different age groups, certain types of brain changes have unstable relations with neurodegenerative disease); hence leading to biased or inaccurate predictions. In this paper, we introduce a novel framework that for the first time develops invariant shape representation learning (ISRL) to further strengthen the robustness of image classifiers. In contrast to existing approaches that mainly derive features in the image space, our model ISRL is designed to jointly capture invariant features in latent shape spaces parameterized by deformable transformations. To achieve this goal, we develop a new learning paradigm based on invariant risk minimization (IRM) to learn invariant representations of image and shape features across multiple training distributions/environments. By embedding the features that are invariant with regard to target variables in different environments, our model consistently offers more accurate predictions. We validate our method by performing classification tasks on both simulated 2D images, real 3D brain and cine cardiovascular magnetic resonance images (MRIs).},
   abbr={WACV}
 }
