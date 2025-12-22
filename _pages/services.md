@@ -214,7 +214,7 @@ nav_order: 6
   <div class="conference-item award-conference">
     <div class="conf-name"><span class="conf-acronym">AISTATS</span> – International Conference on Artificial Intelligence and Statistics</div>
     <div class="conf-years">2025, 2026</div>
-    <div class="award-badge">🏆 Outstanding Reviewer</div>
+    <div class="award-badge">🏆 Best Reviewer Award</div>
   </div>
 
   <div class="conference-item">
@@ -230,7 +230,7 @@ nav_order: 6
   <div class="conference-item award-conference">
     <div class="conf-name"><span class="conf-acronym">ECCV</span> – European Conference on Computer Vision</div>
     <div class="conf-years">2024</div>
-    <div class="award-badge">🏆 Outstanding Reviewer</div>
+    <div class="award-badge">🏆 Outstanding Reviewer Award</div>
   </div>
 
   <div class="conference-item">
