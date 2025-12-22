@@ -326,7 +326,7 @@ nav_order: 6
   <div class="mentee-card">
     <div class="mentee-name"><a href="https://www.linkedin.com/in/amirraj/" target="_blank">Amir Hossain Raj</a></div>
     <div class="mentee-role">Undergraduate Student</div>
-    <div class="mentee-affiliation">Ahsanullah University of Science and Technology</div>
+    <div class="mentee-affiliation">CSE, AUST</div>
     <div class="mentee-current">Current: PhD Student at George Mason University</div>
   </div>
 
