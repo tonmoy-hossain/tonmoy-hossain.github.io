@@ -28,7 +28,7 @@
       "startDate": "2021-08",
       "endDate": "2026-05",
       "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Medical Image Analysis", "Geometric Shape Representations", "Deformations"]
+      "highlights": ["Image Analysis", "Geometric Shape Representations", "Deformations"]
     }
   ],
   "volunteer": [
@@ -45,15 +45,31 @@
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "University of Virginia, USA",
+      "location": "Charlottesville, Virginia",
+      "url": "https://www.virginia.edu/",
+      "area": "Computer Science",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "startDate": "2021-08",
+      "endDate": "2025-05"
+    },
+    {
+      "institution": "University of Virginia, USA",
+      "location": "Charlottesville, Virginia",
+      "url": "https://www.virginia.edu/",
+      "area": "Computer Science",
+      "studyType": "Master's",
+      "startDate": "2021-08",
+      "endDate": "2024-05"
+    },
+    {
+      "institution": "Ahsanullah University of Science and Technology, Bangladesh",
+      "location": "Dhaka, Bangladesh",
+      "url": "https://aust.edu/",
+      "area": "Computer Science and Engineering",
+      "studyType": "Bachelor's",
+      "startDate": "2015-05",
+      "endDate": "2019-07"
     }
   ],
   "awards": [
