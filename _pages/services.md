@@ -138,6 +138,26 @@ nav_order: 6
   margin-bottom: 0.5rem;
 }
 
+.mentee-name a {
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mentee-name a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
+
+.mentee-current {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .mentee-role {
   color: var(--global-theme-color);
   font-weight: 500;
@@ -209,7 +229,7 @@ nav_order: 6
 
   <div class="conference-item award-conference">
     <div class="conf-name"><span class="conf-acronym">ECCV</span> – European Conference on Computer Vision</div>
-    <div class="conf-years">2024, 2025</div>
+    <div class="conf-years">2024</div>
     <div class="award-badge">🏆 Outstanding Reviewer</div>
   </div>
 
@@ -290,33 +310,38 @@ nav_order: 6
 
 <div class="mentee-grid">
   <div class="mentee-card">
-    <div class="mentee-name">Farhana Hossain Suarnali</div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/farhana-suarnali/" target="_blank">Farhana Hossain Suarnali</a></div>
     <div class="mentee-role">Student Researcher</div>
     <div class="mentee-affiliation">CSE, AUST</div>
+    <div class="mentee-current">Current: PhD Student at XYZ University</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name">Ishita Gupta</div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/ishita-gupta/" target="_blank">Ishita Gupta</a></div>
     <div class="mentee-role">Graduate Student</div>
     <div class="mentee-affiliation">CS, University of Virginia</div>
+    <div class="mentee-current">Current: Research Scientist at ABC Company</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name">David Joseph Jagga</div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/david-jagga/" target="_blank">David Joseph Jagga</a></div>
     <div class="mentee-role">Undergraduate Student</div>
     <div class="mentee-affiliation">CS and Data Science, University of Virginia</div>
+    <div class="mentee-current">Current: Software Engineer at Google</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name">Clara Li</div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/clara-li/" target="_blank">Clara Li</a></div>
     <div class="mentee-role">Undergraduate Student</div>
     <div class="mentee-affiliation">University of Virginia</div>
+    <div class="mentee-current">Current: Master's Student at MIT</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name">Hyemin Yang</div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/hyemin-yang/" target="_blank">Hyemin Yang</a></div>
     <div class="mentee-role">Undergraduate Student Researcher</div>
     <div class="mentee-affiliation">DGIST, South Korea</div>
+    <div class="mentee-current">Current: PhD Student at Stanford</div>
   </div>
 </div>
 
