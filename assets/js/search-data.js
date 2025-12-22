@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-through-my-lens",
+          title: "Through My Lens",
+          description: "A visual journey through places and moments",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/photography/";
+          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
