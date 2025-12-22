@@ -1,6 +1,34 @@
 ---
 ---
 
+@article{swarnali2025learning,
+  bibtex_show={true},
+  title={Learning Group Actions In Disentangled Latent Image Representations},
+  author={Swarnali, Farhana Hossain and Zhang, Miaomiao and Hossain, Tonmoy},
+  booktitle={2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  journal={arXiv preprint arXiv:2512.04015},
+  year={2026},
+  organization={IEEE},
+  preview={wacv26_model.png},
+  selected={true},
+  abstract={Modeling group actions on latent representations enables controllable transformations of high-dimensional image data. Prior works applying group-theoretic priors or modeling transformations typically operate in the high-dimensional data space, where group actions apply uniformly across the entire input, making it difficult to disentangle the subspace that varies under transformations. While latent-space methods offer greater flexibility, they still require manual partitioning of latent variables into equivariant and invariant subspaces, limiting the ability to robustly learn and operate group actions within the latent space. To address this, we introduce a novel end-to-end framework that for the first time learns group actions on latent image manifolds, automatically discovering transformation-relevant structures without manual intervention. Our method uses learnable binary masks with straight-through estimation to dynamically partition latent representations into transformation-sensitive and invariant components. We formulate this within a unified optimization framework that jointly learns latent disentanglement and group transformation mappings. The framework can be seamlessly integrated with any standard encoder-decoder architecture. We validate our approach on five 2D/3D image datasets, demonstrating its ability to automatically learn disentangled latent factors for group actions, while downstream classification tasks confirm the effectiveness of the learned representations.},
+  abbr={WACV}
+}
+
+@inproceedings{hossain2025invariant,
+  bibtex_show={true},
+  title={Invariant shape representation learning for image classification},
+  author={Hossain, Tonmoy and Ma, Jing and Li, Jundong and Zhang, Miaomiao},
+  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={4279--4289},
+  year={2025},
+  organization={IEEE},
+  preview={isrl_model.png},
+  selected={true},
+  abstract={Geometric shape features have been widely used as strong predictors for image classification. Nevertheless, most existing classifiers such as deep neural networks (DNNs) directly leverage the statistical correlations between these shape features and target variables. However, these correlations can often be spurious and unstable across different environments (e.g., in different age groups, certain types of brain changes have unstable relations with neurodegenerative disease); hence leading to biased or inaccurate predictions. In this paper, we introduce a novel framework that for the first time develops invariant shape representation learning (ISRL) to further strengthen the robustness of image classifiers. In contrast to existing approaches that mainly derive features in the image space, our model ISRL is designed to jointly capture invariant features in latent shape spaces parameterized by deformable transformations. To achieve this goal, we develop a new learning paradigm based on invariant risk minimization (IRM) to learn invariant representations of image and shape features across multiple training distributions/environments. By embedding the features that are invariant with regard to target variables in different environments, our model consistently offers more accurate predictions. We validate our method by performing classification tasks on both simulated 2D images, real 3D brain and cine cardiovascular magnetic resonance images (MRIs).},
+  abbr={WACV}
+}
+
 @inproceedings{hossain2025corld,
   bibtex_show={true},
   title={CoRLD: Contrastive Representation Learning Of Deformable Shapes In Images},
