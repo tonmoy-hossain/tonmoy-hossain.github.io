@@ -310,38 +310,30 @@ nav_order: 6
 
 <div class="mentee-grid">
   <div class="mentee-card">
-    <div class="mentee-name"><a href="https://www.linkedin.com/in/farhana-suarnali/" target="_blank">Farhana Hossain Suarnali</a></div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/farhanaswarnali/" target="_blank">Farhana Hossain Swarnali</a></div>
     <div class="mentee-role">Student Researcher</div>
     <div class="mentee-affiliation">CSE, AUST</div>
-    <div class="mentee-current">Current: PhD Student at XYZ University</div>
+    <div class="mentee-current">Current: AI Software Engineeri at Genuity Systems Ltd.</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name"><a href="https://www.linkedin.com/in/ishita-gupta/" target="_blank">Ishita Gupta</a></div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/ish--gupta/" target="_blank">Ishita Gupta</a></div>
     <div class="mentee-role">Graduate Student</div>
     <div class="mentee-affiliation">CS, University of Virginia</div>
-    <div class="mentee-current">Current: Research Scientist at ABC Company</div>
+    <div class="mentee-current">Current: AI/ML Software Engineer at Alai Studios</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name"><a href="https://www.linkedin.com/in/david-jagga/" target="_blank">David Joseph Jagga</a></div>
+    <div class="mentee-name"><a href="https://www.linkedin.com/in/amirraj/" target="_blank">Amir Hossain Raj</a></div>
     <div class="mentee-role">Undergraduate Student</div>
-    <div class="mentee-affiliation">CS and Data Science, University of Virginia</div>
-    <div class="mentee-current">Current: Software Engineer at Google</div>
+    <div class="mentee-affiliation">Ahsanullah University of Science and Technology</div>
+    <div class="mentee-current">Current: PhD Student at George Mason University</div>
   </div>
 
   <div class="mentee-card">
-    <div class="mentee-name"><a href="https://www.linkedin.com/in/clara-li/" target="_blank">Clara Li</a></div>
-    <div class="mentee-role">Undergraduate Student</div>
-    <div class="mentee-affiliation">University of Virginia</div>
-    <div class="mentee-current">Current: Master's Student at MIT</div>
-  </div>
-
-  <div class="mentee-card">
-    <div class="mentee-name"><a href="https://www.linkedin.com/in/hyemin-yang/" target="_blank">Hyemin Yang</a></div>
+    <div class="mentee-name">Hyemin Yang</div>
     <div class="mentee-role">Undergraduate Student Researcher</div>
     <div class="mentee-affiliation">DGIST, South Korea</div>
-    <div class="mentee-current">Current: PhD Student at Stanford</div>
   </div>
 </div>
 
