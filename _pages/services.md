@@ -13,6 +13,23 @@ nav_order: 6
   margin: 0 auto;
 }
 
+.award-conference {
+  background: linear-gradient(135deg, var(--global-bg-color) 0%, rgba(var(--global-theme-color-rgb), 0.05) 100%);
+  border-left: 4px solid #FFD700;
+}
+
+.award-badge {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
 .section-title {
   font-size: 1.8rem;
   font-weight: 600;
@@ -174,9 +191,10 @@ nav_order: 6
     <div class="conf-years">2023, 2024, 2025, 2026</div>
   </div>
 
-  <div class="conference-item">
+  <div class="conference-item award-conference">
     <div class="conf-name"><span class="conf-acronym">AISTATS</span> – International Conference on Artificial Intelligence and Statistics</div>
     <div class="conf-years">2025, 2026</div>
+    <div class="award-badge">🏆 Outstanding Reviewer</div>
   </div>
 
   <div class="conference-item">
@@ -186,12 +204,13 @@ nav_order: 6
 
   <div class="conference-item">
     <div class="conf-name"><span class="conf-acronym">CVPR</span> – IEEE/CVF Conference on Computer Vision and Pattern Recognition</div>
-    <div class="conf-years">2024, 2025, 2026</div>
+    <div class="conf-years">2025, 2026</div>
   </div>
 
-  <div class="conference-item">
+  <div class="conference-item award-conference">
     <div class="conf-name"><span class="conf-acronym">ECCV</span> – European Conference on Computer Vision</div>
     <div class="conf-years">2024, 2025</div>
+    <div class="award-badge">🏆 Outstanding Reviewer</div>
   </div>
 
   <div class="conference-item">
@@ -230,19 +249,25 @@ nav_order: 6
   </div>
 
   <div class="conference-item">
-    <div class="conf-name"><span class="conf-acronym">ShapeMI</span> – MICCAI Workshop on Shape in Medical Imaging</div>
-    <div class="conf-years">2024, 2025</div>
+    <div class="conf-name"><span class="conf-acronym">MIDL</span> – Medical Imaging with Deep Learning</div>
+    <div class="conf-years">2023</div>
   </div>
 
   <div class="conference-item">
-    <div class="conf-name"><span class="conf-acronym">MIDL</span> – Medical Imaging with Deep Learning</div>
-    <div class="conf-years">2023, 2024, 2025</div>
+    <div class="conf-name"><span class="conf-acronym">ML4H</span> – Machine Learning for Health</div>
+    <div class="conf-years">2023</div>
   </div>
 
   <div class="conference-item">
     <div class="conf-name"><span class="conf-acronym">NeurIPS</span> – Conference on Neural Information Processing Systems</div>
     <div class="conf-years">2024, 2025</div>
   </div>
+
+  <div class="conference-item">
+    <div class="conf-name"><span class="conf-acronym">ShapeMI</span> – MICCAI Workshop on Shape in Medical Imaging</div>
+    <div class="conf-years">2024</div>
+  </div>
+
 </div>
 
 <div class="subsection-title">Journals</div>
