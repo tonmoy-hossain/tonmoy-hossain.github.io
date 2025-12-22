@@ -313,7 +313,7 @@ nav_order: 6
     <div class="mentee-name"><a href="https://www.linkedin.com/in/farhanaswarnali/" target="_blank">Farhana Hossain Swarnali</a></div>
     <div class="mentee-role">Student Researcher</div>
     <div class="mentee-affiliation">CSE, AUST</div>
-    <div class="mentee-current">Current: AI Software Engineeri at Genuity Systems Ltd.</div>
+    <div class="mentee-current">Current: AI Software Engineer at Genuity Systems Ltd.</div>
   </div>
 
   <div class="mentee-card">
