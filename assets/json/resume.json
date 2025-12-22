@@ -45,15 +45,17 @@
   ],
   "education": [
     {
+      "order": 1,
       "institution": "University of Virginia, USA",
       "location": "Charlottesville, Virginia",
       "url": "https://www.virginia.edu/",
       "area": "Computer Science",
       "studyType": "PhD",
       "startDate": "2021-08",
-      "endDate": "2025-05"
+      "endDate": "2026-05"
     },
     {
+      "order": 2,
       "institution": "University of Virginia, USA",
       "location": "Charlottesville, Virginia",
       "url": "https://www.virginia.edu/",
@@ -63,6 +65,7 @@
       "endDate": "2024-05"
     },
     {
+      "order": 3,
       "institution": "Ahsanullah University of Science and Technology, Bangladesh",
       "location": "Dhaka, Bangladesh",
       "url": "https://aust.edu/",
