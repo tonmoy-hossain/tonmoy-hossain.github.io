@@ -5,7 +5,7 @@
     "image": "",
     "email": "tonmoy (at) virginia (dot) edu",
     "url": "https://tonmoy-hossain.github.io/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "summary": "A Bangladeshi-born graduate student working on representation learning methods that capture anatomical structure and variability from high-dimensional imaging data.",
     "location": {
       "address": "85 Engineers Way",
       "postalCode": "VA 22903",
@@ -24,23 +24,22 @@
   "work": [
     {
       "name": "University of Virginia",
-      "position": "Graduate Research Assistant and Endowed Fellow",
+      "position": "Graduate Research Assistant",
       "startDate": "2021-08",
       "endDate": "2026-05",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "summary": "Develop geometry-aware deep learning frameworks for efficient and robust deformable shape representations in medical imaging.",
       "highlights": ["Image Analysis", "Geometric Shape Representations", "Deformations"]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
+      "organization": "University of Virginia",
+      "location": "Virginia, United States",
+      "position": "Co-Chair and Graduate Program Representative",
       "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "startDate": "2022-01",
+      "endDate": "2024-12",
+      "highlights": ["Outstanding Gradaute Service Award"]
     }
   ],
   "education": [
@@ -102,7 +101,7 @@
   ],
   "interests": [
     {
-      "name": "Medical Vision",
+      "name": "Computer Vision in Medical Imaging",
       "icon": "fa-solid fa-tag",
       "keywords": [
         "Image Analysis",
