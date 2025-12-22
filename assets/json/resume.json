@@ -77,11 +77,27 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Copenhaver Charitable Trust Bicentennial Fellow",
+      "date": "2024-09",
+      "awarder": "University of Virginia",
+      "summary": "The endowed fellowship honors exceptional UVA Engineering PhD students by awarding distinguished recognition and dedicated funding to advance their research and scholarly impact."
+    },
+    {
+      "title": "Best Paper Award",
+      "date": "2023/2020",
+      "awarder": "ML4H 2023, IEEE IEMCON 2020"
+    },
+    {
+      "title": "Outstanding Reviewer Award",
+      "date": "2025/2024",
+      "awarder": "AISTATS 2025 and ECCV 2024",
+      "summary": "Honored for outstanding peer-review contributions and service to the research community."
+    },
+    {
+      "title": "Outstanding Graduate Service Award",
+      "date": "2024-05",
+      "awarder": "University of Virginia",
+      "summary": "Recognized for significant service to the department, school, or university."
     }
   ],
   "certificates": [
