@@ -343,6 +343,5 @@ nav_order: 6
   <div class="leadership-role">Co-Chair & Graduate Program Representative</div>
   <div class="leadership-org">Computer Science Graduate Student Group (CSGSG)</div>
   <div class="leadership-affiliation">University of Virginia</div>
-</div>
-
+  <div class="award-badge" style="margin-top: 0.8rem;">🏆 Outstanding Graduate Service Award</div>
 </div>
