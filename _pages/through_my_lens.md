@@ -272,39 +272,45 @@ nav_order: 6
 
     <!-- Location: Paris, France -->
     <div class="location-section">
-      <h3 class="location-title">Paris, France</h3>
-      <span class="location-date">October 2024</span>
+      <h3 class="location-title">Golden Gate Bridge, San Francisco</h3>
+      <span class="location-date">August 2025</span>
       
       <div class="photo-grid">
         <div class="photo-item tall" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_01.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_2976.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item medium" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_02.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_2993.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item short" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_03.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3009.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item extra-tall" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_04.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3018.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item medium" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_05.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3022.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item tall" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_06.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3028.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item short" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_07.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3032.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item medium" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_08.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3037.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item tall" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_09.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3042.JPEG" alt="San Francisco">
         </div>
         <div class="photo-item extra-tall" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/paris_10.jpg" alt="Paris">
+          <img src="/assets/img/photography/IMG_3046.JPEG" alt="San Francisco">
+        </div>
+        <div class="photo-item medium" onclick="openLightbox(this)">
+          <img src="/assets/img/photography/IMG_3049.JPEG" alt="San Francisco">
+        </div>
+        <div class="photo-item short" onclick="openLightbox(this)">
+          <img src="/assets/img/photography/IMG_3051.JPEG" alt="San Francisco">
         </div>
       </div>
     </div>
