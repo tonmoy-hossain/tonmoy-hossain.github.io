@@ -104,10 +104,12 @@ nav_order: 6
     display: block;
   }
 
-  /* Masonry Grid Layout - Preserves Aspect Ratios */
+  /* Masonry Grid Layout - True staggered columns */
   .photo-grid {
-    column-count: 4;
-    column-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 10px;
+    gap: 15px;
     margin-top: 2rem;
   }
 
@@ -119,10 +121,6 @@ nav_order: 6
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: #f5f5f5;
-    margin-bottom: 15px;
-    break-inside: avoid;
-    display: inline-block;
-    width: 100%;
   }
 
   .photo-item:hover {
@@ -214,7 +212,7 @@ nav_order: 6
   /* Responsive adjustments */
   @media (max-width: 1200px) {
     .photo-grid {
-      column-count: 3;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
 
@@ -232,12 +230,8 @@ nav_order: 6
     }
 
     .photo-grid {
-      column-count: 2;
-      column-gap: 10px;
-    }
-
-    .photo-item {
-      margin-bottom: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
     }
 
     .lightbox-close {
@@ -248,7 +242,7 @@ nav_order: 6
 
   @media (max-width: 480px) {
     .photo-grid {
-      column-count: 1;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -430,4 +424,33 @@ nav_order: 6
       closeLightbox();
     }
   });
+
+  // Masonry layout - calculate grid row spans based on actual image heights
+  function resizeMasonryItem(item) {
+    const grid = document.querySelector('.photo-grid');
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
+    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const img = item.querySelector('img');
+    
+    if (img.complete) {
+      const imgHeight = img.getBoundingClientRect().height;
+      const rowSpan = Math.ceil((imgHeight + rowGap) / (rowHeight + rowGap));
+      item.style.gridRowEnd = 'span ' + rowSpan;
+    } else {
+      img.addEventListener('load', function() {
+        const imgHeight = img.getBoundingClientRect().height;
+        const rowSpan = Math.ceil((imgHeight + rowGap) / (rowHeight + rowGap));
+        item.style.gridRowEnd = 'span ' + rowSpan;
+      });
+    }
+  }
+
+  function resizeAllMasonryItems() {
+    const allItems = document.querySelectorAll('.photo-item');
+    allItems.forEach(item => resizeMasonryItem(item));
+  }
+
+  // Run on load and resize
+  window.addEventListener('load', resizeAllMasonryItems);
+  window.addEventListener('resize', resizeAllMasonryItems);
 </script>
