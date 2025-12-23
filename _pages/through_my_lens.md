@@ -104,12 +104,10 @@ nav_order: 6
     display: block;
   }
 
-  /* Masonry Grid Layout */
+  /* Masonry Grid Layout - Preserves Aspect Ratios */
   .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 10px;
-    gap: 15px;
+    column-count: 4;
+    column-gap: 15px;
     margin-top: 2rem;
   }
 
@@ -120,6 +118,11 @@ nav_order: 6
     position: relative;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f5f5f5;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
   }
 
   .photo-item:hover {
@@ -130,31 +133,13 @@ nav_order: 6
 
   .photo-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .photo-item:hover img {
-    transform: scale(1.05);
-  }
-
-  /* Grid item sizes for masonry effect */
-  .photo-item.tall {
-    grid-row-end: span 35;
-  }
-
-  .photo-item.medium {
-    grid-row-end: span 25;
-  }
-
-  .photo-item.short {
-    grid-row-end: span 20;
-  }
-
-  .photo-item.extra-tall {
-    grid-row-end: span 45;
+    transform: scale(1.02);
   }
 
   /* Lightbox Overlay */
@@ -227,6 +212,12 @@ nav_order: 6
   }
 
   /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .photo-grid {
+      column-count: 3;
+    }
+  }
+
   @media (max-width: 768px) {
     .page-header h1 {
       font-size: 2.5rem;
@@ -241,13 +232,23 @@ nav_order: 6
     }
 
     .photo-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
+      column-count: 2;
+      column-gap: 10px;
+    }
+
+    .photo-item {
+      margin-bottom: 10px;
     }
 
     .lightbox-close {
       top: -40px;
       font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-grid {
+      column-count: 1;
     }
   }
 
@@ -276,40 +277,40 @@ nav_order: 6
       <span class="location-date">August 2025</span>
       
       <div class="photo-grid">
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_2976.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_2993.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3009.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item extra-tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3018.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3022.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3028.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3032.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3037.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3042.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item extra-tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3046.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3049.JPEG" alt="San Francisco">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/IMG_3051.JPEG" alt="San Francisco">
         </div>
       </div>
@@ -323,28 +324,28 @@ nav_order: 6
       <span class="location-date">June 2024</span>
       
       <div class="photo-grid">
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_01.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_02.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_03.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item extra-tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_04.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_05.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_06.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_07.jpg" alt="Tokyo">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/tokyo_08.jpg" alt="Tokyo">
         </div>
       </div>
@@ -361,31 +362,31 @@ nav_order: 6
       <span class="location-date">August 2023</span>
       
       <div class="photo-grid">
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_01.jpg" alt="Santorini">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_02.jpg" alt="Santorini">
         </div>
-        <div class="photo-item extra-tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_03.jpg" alt="Santorini">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_04.jpg" alt="Santorini">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_05.jpg" alt="Santorini">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_06.jpg" alt="Santorini">
         </div>
-        <div class="photo-item short" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_07.jpg" alt="Santorini">
         </div>
-        <div class="photo-item medium" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_08.jpg" alt="Santorini">
         </div>
-        <div class="photo-item tall" onclick="openLightbox(this)">
+        <div class="photo-item" onclick="openLightbox(this)">
           <img src="/assets/img/photography/santorini_09.jpg" alt="Santorini">
         </div>
       </div>
@@ -428,22 +429,5 @@ nav_order: 6
     if (e.key === 'Escape') {
       closeLightbox();
     }
-  });
-
-  // Randomly assign height classes to photo items for masonry effect
-  document.addEventListener('DOMContentLoaded', function() {
-    const photoItems = document.querySelectorAll('.photo-item');
-    const heights = ['short', 'medium', 'tall', 'extra-tall'];
-    
-    photoItems.forEach(item => {
-      // Only assign random height if not already assigned
-      if (!item.classList.contains('short') && 
-          !item.classList.contains('medium') && 
-          !item.classList.contains('tall') && 
-          !item.classList.contains('extra-tall')) {
-        const randomHeight = heights[Math.floor(Math.random() * heights.length)];
-        item.classList.add(randomHeight);
-      }
-    });
   });
 </script>
