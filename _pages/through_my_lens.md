@@ -109,16 +109,18 @@ nav_order: 6
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-auto-rows: 10px;
-    gap: 0;
+    gap: 15px;
     margin-top: 2rem;
   }
 
   .photo-item {
     cursor: pointer;
     overflow: hidden;
+    border-radius: 2px;
     position: relative;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f5f5f5;
   }
 
   .photo-item:hover {
@@ -229,7 +231,7 @@ nav_order: 6
 
     .photo-grid {
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0;
+      gap: 10px;
     }
 
     .lightbox-close {
@@ -426,18 +428,18 @@ nav_order: 6
   // Masonry layout - calculate grid row spans based on actual image heights
   function resizeMasonryItem(item) {
     const grid = document.querySelector('.photo-grid');
-    const rowGap = 0; // No gap between images
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
     const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     const img = item.querySelector('img');
     
     if (img.complete) {
       const imgHeight = img.getBoundingClientRect().height;
-      const rowSpan = Math.ceil(imgHeight / rowHeight);
+      const rowSpan = Math.ceil((imgHeight + rowGap) / (rowHeight + rowGap));
       item.style.gridRowEnd = 'span ' + rowSpan;
     } else {
       img.addEventListener('load', function() {
         const imgHeight = img.getBoundingClientRect().height;
-        const rowSpan = Math.ceil(imgHeight / rowHeight);
+        const rowSpan = Math.ceil((imgHeight + rowGap) / (rowHeight + rowGap));
         item.style.gridRowEnd = 'span ' + rowSpan;
       });
     }
