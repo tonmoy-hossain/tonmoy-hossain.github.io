@@ -1,6 +1,7 @@
 ---
 layout: page
 title: News
+nav: true
 permalink: /news/
 announcements:
   scrollable: true

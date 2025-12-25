@@ -29,6 +29,20 @@
       "endDate": "2026-05",
       "summary": "Develop geometry-aware deep learning frameworks for efficient and robust deformable shape representations in medical imaging.",
       "highlights": ["Image Analysis", "Geometric Shape Representations", "Deformations"]
+    },
+    {
+      "name": "GE Healthcare",
+      "position": "AI/ML Intern",
+      "startDate": "2025-06",
+      "endDate": "2025-11",
+      "summary": "Worked on a diffeomorphic image augmentation model via latent conditional variational modeling.",
+      "highlights": ["Image Augmentations", "Diffeomorphisms", "Medical Imaging"]
+    },
+    {
+      "name": "Ahsanullah University of Science and Technology",
+      "position": "Lecturer",
+      "startDate": "2019-07",
+      "endDate": "2021-08"
     }
   ],
   "volunteer": [
