@@ -8,112 +8,368 @@ nav_order: 6
 ---
 
 <style>
-  /* Elegant serif font pairing with modern sans-serif */
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+  /* Elegant serif font pairing */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
   .photography-page {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Crimson Text', serif;
     color: #2c2c2c;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 
+  /* ============================================
+     HEADER
+  ============================================ */
   .page-header {
     text-align: center;
-    margin: 4rem 0 3rem;
+    margin: 5rem 0 4rem;
     padding: 0 1rem;
   }
 
   .page-header h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
     color: #1a1a1a;
   }
 
   .page-header p {
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #888;
+    font-size: 1.1rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    color: #666;
     margin-top: 1rem;
   }
 
-  .year-section {
-    margin: 6rem 0;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* ============================================
+     ALBUMS GRID
+  ============================================ */
+  .albums-container {
+    margin: 5rem 0;
   }
 
-  .year-section:nth-child(1) { animation-delay: 0.2s; }
-  .year-section:nth-child(2) { animation-delay: 0.4s; }
-  .year-section:nth-child(3) { animation-delay: 0.6s; }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .year-header {
-    font-family: 'Cormorant Garamond', serif;
+  .year-divider {
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 6rem 0 3rem;
     position: relative;
     color: #1a1a1a;
   }
 
-  .year-header::after {
+  .year-divider::before,
+  .year-divider::after {
     content: '';
-    display: block;
-    width: 60px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
     height: 1px;
-    background: linear-gradient(to right, transparent, #d4af37, transparent);
-    margin: 1rem auto 0;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
   }
 
-  .location-section {
-    margin-bottom: 5rem;
+  .year-divider::before {
+    right: calc(50% + 100px);
   }
 
-  .location-title {
-    font-family: 'Cormorant Garamond', serif;
+  .year-divider::after {
+    left: calc(50% + 100px);
+  }
+
+  .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin: 4rem 0;
+  }
+
+  .album-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .album-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 2;
+    transition: opacity 0.5s ease;
+  }
+
+  .album-card:hover::before {
+    opacity: 0.85;
+  }
+
+  .album-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .album-card:hover .album-image {
+    transform: scale(1.05);
+  }
+
+  .album-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    z-index: 3;
+    color: white;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .album-card:hover .album-info {
+    transform: translateY(-5px);
+  }
+
+  .album-title {
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #2c2c2c;
-    position: relative;
-    display: inline-block;
+    letter-spacing: 0.01em;
   }
 
-  .location-date {
+  .album-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    opacity: 0.95;
+    letter-spacing: 0.05em;
+  }
+
+  .album-date {
+    font-style: italic;
+  }
+
+  .album-count {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 300;
+  }
+
+  .view-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 4;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .album-card:hover .view-indicator {
+    opacity: 1;
+  }
+
+  .view-indicator-circle {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .view-indicator-text {
+    font-size: 0.85rem;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #999;
-    margin-bottom: 2rem;
-    display: block;
   }
 
-  /* Masonry Grid Layout - True staggered columns */
-  .photo-grid {
+  /* ============================================
+     MODAL
+  ============================================ */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .modal-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .modal-container.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background: white;
+    max-width: 1400px;
+    margin: 3rem auto;
+    border-radius: 4px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .modal-container.active .modal-content {
+    transform: scale(1);
+  }
+
+  /* Modal Header */
+  .modal-header {
+    padding: 3rem 3rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 200;
+    line-height: 1;
+  }
+
+  .modal-close:hover {
+    color: #000;
+    transform: rotate(90deg);
+  }
+
+  .modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+
+  .modal-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #666;
+    letter-spacing: 0.05em;
+  }
+
+  /* Modal Navigation */
+  .modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e0e0e0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: #333;
+    z-index: 10;
+  }
+
+  .modal-nav:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .modal-nav-prev {
+    left: -25px;
+  }
+
+  .modal-nav-next {
+    right: -25px;
+  }
+
+  .modal-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .modal-nav:disabled:hover {
+    transform: translateY(-50%) scale(1);
+    box-shadow: none;
+  }
+
+  /* Modal Photo Grid */
+  .modal-body {
+    padding: 3rem;
+  }
+
+  .modal-photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-auto-rows: 10px;
-    gap: 15px;
-    margin-top: 2rem;
+    gap: 20px;
   }
 
-  .photo-item {
+  .modal-photo-item {
     cursor: pointer;
     overflow: hidden;
     border-radius: 2px;
@@ -123,24 +379,26 @@ nav_order: 6
     background: #f5f5f5;
   }
 
-  .photo-item:hover {
+  .modal-photo-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    z-index: 10;
+    z-index: 5;
   }
 
-  .photo-item img {
+  .modal-photo-item img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .photo-item:hover img {
-    transform: scale(1.02);
+  .modal-photo-item:hover img {
+    transform: scale(1.03);
   }
 
-  /* Lightbox Overlay */
+  /* ============================================
+     LIGHTBOX (for full-screen photo viewing)
+  ============================================ */
   .lightbox {
     display: none;
     position: fixed;
@@ -148,8 +406,8 @@ nav_order: 6
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 9999;
+    background: rgba(0, 0, 0, 0.96);
+    z-index: 10000;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -162,15 +420,15 @@ nav_order: 6
   }
 
   .lightbox-content {
-    max-width: 90%;
-    max-height: 90vh;
+    max-width: 95%;
+    max-height: 95vh;
     position: relative;
     animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @keyframes zoomIn {
     from {
-      transform: scale(0.8);
+      transform: scale(0.85);
       opacity: 0;
     }
     to {
@@ -181,14 +439,14 @@ nav_order: 6
 
   .lightbox-content img {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 95vh;
     object-fit: contain;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
   }
 
   .lightbox-close {
     position: absolute;
-    top: -50px;
+    top: -60px;
     right: 0;
     font-size: 2.5rem;
     color: white;
@@ -196,238 +454,547 @@ nav_order: 6
     background: none;
     border: none;
     padding: 0;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     font-weight: 200;
+    opacity: 0.8;
   }
 
   .lightbox-close:hover {
     transform: rotate(90deg);
+    opacity: 1;
   }
 
-  /* Responsive adjustments */
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    opacity: 0.7;
+  }
+
+  .lightbox-nav:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .lightbox-prev {
+    left: 2rem;
+  }
+
+  .lightbox-next {
+    right: 2rem;
+  }
+
+  /* ============================================
+     ANIMATIONS
+  ============================================ */
+  .album-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .album-card:nth-child(1) { animation-delay: 0.1s; }
+  .album-card:nth-child(2) { animation-delay: 0.2s; }
+  .album-card:nth-child(3) { animation-delay: 0.3s; }
+  .album-card:nth-child(4) { animation-delay: 0.4s; }
+  .album-card:nth-child(5) { animation-delay: 0.5s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .modal-photo-item {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .modal-photo-item:nth-child(1) { animation-delay: 0.05s; }
+  .modal-photo-item:nth-child(2) { animation-delay: 0.1s; }
+  .modal-photo-item:nth-child(3) { animation-delay: 0.15s; }
+  .modal-photo-item:nth-child(4) { animation-delay: 0.2s; }
+  .modal-photo-item:nth-child(5) { animation-delay: 0.25s; }
+  .modal-photo-item:nth-child(6) { animation-delay: 0.3s; }
+  .modal-photo-item:nth-child(7) { animation-delay: 0.35s; }
+  .modal-photo-item:nth-child(8) { animation-delay: 0.4s; }
+  .modal-photo-item:nth-child(9) { animation-delay: 0.45s; }
+  .modal-photo-item:nth-child(10) { animation-delay: 0.5s; }
+  .modal-photo-item:nth-child(11) { animation-delay: 0.55s; }
+  .modal-photo-item:nth-child(12) { animation-delay: 0.6s; }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
   @media (max-width: 1200px) {
-    .photo-grid {
+    .albums-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .modal-photo-grid {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .modal-nav-prev {
+      left: -20px;
+    }
+
+    .modal-nav-next {
+      right: -20px;
     }
   }
 
   @media (max-width: 768px) {
     .page-header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
-    .year-header {
+    .albums-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .album-title {
+      font-size: 1.6rem;
+    }
+
+    .year-divider {
       font-size: 2rem;
     }
 
-    .location-title {
-      font-size: 1.5rem;
+    .year-divider::before,
+    .year-divider::after {
+      width: 50px;
     }
 
-    .photo-grid {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 10px;
+    .year-divider::before {
+      right: calc(50% + 60px);
+    }
+
+    .year-divider::after {
+      left: calc(50% + 60px);
+    }
+
+    .modal-content {
+      margin: 2rem 1rem;
+    }
+
+    .modal-header {
+      padding: 2rem 2rem 1.5rem;
+    }
+
+    .modal-title {
+      font-size: 2rem;
+    }
+
+    .modal-close {
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .modal-body {
+      padding: 2rem 1.5rem;
+    }
+
+    .modal-photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .modal-nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+
+    .modal-nav-prev {
+      left: 10px;
+    }
+
+    .modal-nav-next {
+      right: 10px;
     }
 
     .lightbox-close {
-      top: -40px;
+      top: -50px;
       font-size: 2rem;
+    }
+
+    .lightbox-nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+
+    .lightbox-prev {
+      left: 1rem;
+    }
+
+    .lightbox-next {
+      right: 1rem;
     }
   }
 
   @media (max-width: 480px) {
-    .photo-grid {
+    .modal-photo-grid {
       grid-template-columns: 1fr;
     }
-  }
-
-  /* Decorative elements */
-  .divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
-    margin: 4rem auto;
-    max-width: 300px;
   }
 </style>
 
 <div class="photography-page">
   <div class="page-header">
     <h1>Through My Lens</h1>
-    <p>A Visual Journey</p>
+    <p>A curated collection of moments and places</p>
   </div>
 
-  <!-- 2024 -->
-  <div class="year-section">
-    <h2 class="year-header">2024</h2>
-
-    <!-- Location: Paris, France -->
-    <div class="location-section">
-      <h3 class="location-title">Golden Gate Bridge, San Francisco</h3>
-      <span class="location-date">August 2025</span>
-      
-      <div class="photo-grid">
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_2976.JPEG" alt="San Francisco">
+  <div class="albums-container">
+    
+    <!-- 2025 -->
+    <h2 class="year-divider">2025</h2>
+    
+    <div class="albums-grid">
+      <!-- Golden Gate Bridge Album -->
+      <div class="album-card" onclick="openAlbum('golden-gate')">
+        <img src="/assets/img/photography/IMG_3009.JPEG" alt="Golden Gate Bridge" class="album-image">
+        <div class="album-info">
+          <h3 class="album-title">Golden Gate Bridge</h3>
+          <div class="album-meta">
+            <span class="album-date">San Francisco · August 2025</span>
+            <span class="album-count">12 photos</span>
+          </div>
         </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_2993.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3009.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3018.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3022.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3028.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3032.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3037.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3042.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3046.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3049.JPEG" alt="San Francisco">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/IMG_3051.JPEG" alt="San Francisco">
+        <div class="view-indicator">
+          <div class="view-indicator-circle">
+            <span class="view-indicator-text">View</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Location: Tokyo, Japan -->
-    <div class="location-section">
-      <h3 class="location-title">Tokyo, Japan</h3>
-      <span class="location-date">June 2024</span>
-      
-      <div class="photo-grid">
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_01.jpg" alt="Tokyo">
+    <!-- 2024 -->
+    <h2 class="year-divider">2024</h2>
+    
+    <div class="albums-grid">
+      <!-- Tokyo Album -->
+      <div class="album-card" onclick="openAlbum('tokyo')">
+        <img src="/assets/img/photography/tokyo_01.jpg" alt="Tokyo" class="album-image">
+        <div class="album-info">
+          <h3 class="album-title">Tokyo</h3>
+          <div class="album-meta">
+            <span class="album-date">Japan · June 2024</span>
+            <span class="album-count">8 photos</span>
+          </div>
         </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_02.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_03.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_04.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_05.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_06.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_07.jpg" alt="Tokyo">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/tokyo_08.jpg" alt="Tokyo">
+        <div class="view-indicator">
+          <div class="view-indicator-circle">
+            <span class="view-indicator-text">View</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- 2023 -->
-  <div class="year-section">
-    <h2 class="year-header">2023</h2>
-
-    <!-- Location: Santorini, Greece -->
-    <div class="location-section">
-      <h3 class="location-title">Santorini, Greece</h3>
-      <span class="location-date">August 2023</span>
-      
-      <div class="photo-grid">
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_01.jpg" alt="Santorini">
+    <!-- 2023 -->
+    <h2 class="year-divider">2023</h2>
+    
+    <div class="albums-grid">
+      <!-- Santorini Album -->
+      <div class="album-card" onclick="openAlbum('santorini')">
+        <img src="/assets/img/photography/santorini_01.jpg" alt="Santorini" class="album-image">
+        <div class="album-info">
+          <h3 class="album-title">Santorini</h3>
+          <div class="album-meta">
+            <span class="album-date">Greece · August 2023</span>
+            <span class="album-count">9 photos</span>
+          </div>
         </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_02.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_03.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_04.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_05.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_06.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_07.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_08.jpg" alt="Santorini">
-        </div>
-        <div class="photo-item" onclick="openLightbox(this)">
-          <img src="/assets/img/photography/santorini_09.jpg" alt="Santorini">
+        <div class="view-indicator">
+          <div class="view-indicator-circle">
+            <span class="view-indicator-text">View</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-      <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+<!-- Modal Container -->
+<div class="modal-container" id="modal-container">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    
+    <!-- Navigation between albums -->
+    <button class="modal-nav modal-nav-prev" id="modal-prev" onclick="navigateAlbum(-1)">‹</button>
+    <button class="modal-nav modal-nav-next" id="modal-next" onclick="navigateAlbum(1)">›</button>
+    
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-subtitle" id="modal-subtitle"></p>
+    </div>
+    
+    <div class="modal-body">
+      <div class="modal-photo-grid" id="modal-photo-grid"></div>
     </div>
   </div>
 </div>
 
+<!-- Lightbox for full-screen photo viewing -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</button>
+  </div>
+</div>
+
 <script>
-  function openLightbox(element) {
-    const img = element.querySelector('img');
+  // Album data
+  const albums = {
+    'golden-gate': {
+      title: 'Golden Gate Bridge',
+      subtitle: 'San Francisco, California · August 2025',
+      photos: [
+        '/assets/img/photography/IMG_2976.JPEG',
+        '/assets/img/photography/IMG_2993.JPEG',
+        '/assets/img/photography/IMG_3009.JPEG',
+        '/assets/img/photography/IMG_3018.JPEG',
+        '/assets/img/photography/IMG_3022.JPEG',
+        '/assets/img/photography/IMG_3028.JPEG',
+        '/assets/img/photography/IMG_3032.JPEG',
+        '/assets/img/photography/IMG_3037.JPEG',
+        '/assets/img/photography/IMG_3042.JPEG',
+        '/assets/img/photography/IMG_3046.JPEG',
+        '/assets/img/photography/IMG_3049.JPEG',
+        '/assets/img/photography/IMG_3051.JPEG'
+      ]
+    },
+    'tokyo': {
+      title: 'Tokyo',
+      subtitle: 'Japan · June 2024',
+      photos: [
+        '/assets/img/photography/tokyo_01.jpg',
+        '/assets/img/photography/tokyo_02.jpg',
+        '/assets/img/photography/tokyo_03.jpg',
+        '/assets/img/photography/tokyo_04.jpg',
+        '/assets/img/photography/tokyo_05.jpg',
+        '/assets/img/photography/tokyo_06.jpg',
+        '/assets/img/photography/tokyo_07.jpg',
+        '/assets/img/photography/tokyo_08.jpg'
+      ]
+    },
+    'santorini': {
+      title: 'Santorini',
+      subtitle: 'Greece · August 2023',
+      photos: [
+        '/assets/img/photography/santorini_01.jpg',
+        '/assets/img/photography/santorini_02.jpg',
+        '/assets/img/photography/santorini_03.jpg',
+        '/assets/img/photography/santorini_04.jpg',
+        '/assets/img/photography/santorini_05.jpg',
+        '/assets/img/photography/santorini_06.jpg',
+        '/assets/img/photography/santorini_07.jpg',
+        '/assets/img/photography/santorini_08.jpg',
+        '/assets/img/photography/santorini_09.jpg'
+      ]
+    }
+  };
+
+  const albumOrder = ['santorini', 'tokyo', 'golden-gate'];
+  let currentAlbumIndex = 0;
+  let currentLightboxImages = [];
+  let currentLightboxIndex = 0;
+
+  // ============================================
+  // MODAL FUNCTIONS
+  // ============================================
+  
+  function openAlbum(albumId) {
+    currentAlbumIndex = albumOrder.indexOf(albumId);
+    const album = albums[albumId];
+    
+    // Update modal content
+    document.getElementById('modal-title').textContent = album.title;
+    document.getElementById('modal-subtitle').textContent = album.subtitle;
+    
+    // Build photo grid
+    const photoGrid = document.getElementById('modal-photo-grid');
+    photoGrid.innerHTML = '';
+    
+    album.photos.forEach((photo, index) => {
+      const photoItem = document.createElement('div');
+      photoItem.className = 'modal-photo-item';
+      photoItem.onclick = () => openLightboxFromModal(albumId, index);
+      
+      const img = document.createElement('img');
+      img.src = photo;
+      img.alt = album.title;
+      
+      photoItem.appendChild(img);
+      photoGrid.appendChild(photoItem);
+    });
+    
+    // Update navigation buttons
+    updateModalNavigation();
+    
+    // Show modal
+    document.getElementById('modal-overlay').classList.add('active');
+    document.getElementById('modal-container').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Recalculate masonry after images load
+    setTimeout(resizeAllMasonryItems, 100);
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('active');
+    document.getElementById('modal-container').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function navigateAlbum(direction) {
+    currentAlbumIndex += direction;
+    
+    if (currentAlbumIndex < 0) {
+      currentAlbumIndex = albumOrder.length - 1;
+    } else if (currentAlbumIndex >= albumOrder.length) {
+      currentAlbumIndex = 0;
+    }
+    
+    const albumId = albumOrder[currentAlbumIndex];
+    
+    // Close and reopen with new album (smooth transition)
+    const modalContainer = document.getElementById('modal-container');
+    modalContainer.style.opacity = '0';
+    
+    setTimeout(() => {
+      openAlbum(albumId);
+      modalContainer.style.opacity = '1';
+    }, 200);
+  }
+
+  function updateModalNavigation() {
+    const prevBtn = document.getElementById('modal-prev');
+    const nextBtn = document.getElementById('modal-next');
+    
+    // Always enable navigation (circular)
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+  }
+
+  // ============================================
+  // LIGHTBOX FUNCTIONS
+  // ============================================
+  
+  function openLightboxFromModal(albumId, photoIndex) {
+    currentLightboxImages = albums[albumId].photos;
+    currentLightboxIndex = photoIndex;
+    
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
+    lightboxImg.src = currentLightboxImages[currentLightboxIndex];
     lightbox.classList.add('active');
-    
-    // Prevent body scroll when lightbox is open
-    document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.remove('active');
-    
-    // Restore body scroll
-    document.body.style.overflow = '';
   }
 
-  // Close lightbox with Escape key
+  function navigateLightbox(direction) {
+    currentLightboxIndex += direction;
+    
+    if (currentLightboxIndex < 0) {
+      currentLightboxIndex = currentLightboxImages.length - 1;
+    } else if (currentLightboxIndex >= currentLightboxImages.length) {
+      currentLightboxIndex = 0;
+    }
+    
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.style.opacity = '0';
+    
+    setTimeout(() => {
+      lightboxImg.src = currentLightboxImages[currentLightboxIndex];
+      lightboxImg.style.opacity = '1';
+    }, 150);
+  }
+
+  // ============================================
+  // KEYBOARD NAVIGATION
+  // ============================================
+  
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeLightbox();
+    const modalActive = document.getElementById('modal-container').classList.contains('active');
+    const lightboxActive = document.getElementById('lightbox').classList.contains('active');
+    
+    if (lightboxActive) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        navigateLightbox(-1);
+      } else if (e.key === 'ArrowRight') {
+        navigateLightbox(1);
+      }
+    } else if (modalActive) {
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'ArrowLeft') {
+        navigateAlbum(-1);
+      } else if (e.key === 'ArrowRight') {
+        navigateAlbum(1);
+      }
     }
   });
 
-  // Masonry layout - calculate grid row spans based on actual image heights
+  // ============================================
+  // MASONRY LAYOUT
+  // ============================================
+  
   function resizeMasonryItem(item) {
-    const grid = document.querySelector('.photo-grid');
+    const grid = item.closest('.modal-photo-grid');
+    if (!grid) return;
+    
     const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
     const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     const img = item.querySelector('img');
@@ -446,11 +1013,9 @@ nav_order: 6
   }
 
   function resizeAllMasonryItems() {
-    const allItems = document.querySelectorAll('.photo-item');
+    const allItems = document.querySelectorAll('.modal-photo-item');
     allItems.forEach(item => resizeMasonryItem(item));
   }
 
-  // Run on load and resize
-  window.addEventListener('load', resizeAllMasonryItems);
   window.addEventListener('resize', resizeAllMasonryItems);
 </script>
