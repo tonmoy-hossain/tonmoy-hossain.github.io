@@ -225,7 +225,7 @@ nav_order: 6
     background: rgba(0, 0, 0, 0.92);
     z-index: 9998;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal-overlay.active {
@@ -243,7 +243,7 @@ nav_order: 6
     z-index: 9999;
     overflow-y: auto;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal-container.active {
@@ -257,18 +257,18 @@ nav_order: 6
     margin: 3rem auto;
     border-radius: 4px;
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.9) translateY(30px);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
   }
 
   .modal-container.active .modal-content {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 
   /* Modal Header */
   .modal-header {
-    padding: 3rem 3rem 2rem;
+    padding: 3rem 5rem 2rem;
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
     position: relative;
@@ -278,24 +278,29 @@ nav_order: 6
     position: absolute;
     top: 2rem;
     right: 2rem;
-    background: none;
-    border: none;
-    font-size: 2.5rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    font-size: 2rem;
     color: #666;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .modal-close:hover {
     color: #000;
     transform: rotate(90deg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #ccc;
   }
 
   .modal-title {
@@ -615,7 +620,7 @@ nav_order: 6
     }
 
     .modal-header {
-      padding: 2rem 2rem 1.5rem;
+      padding: 2rem 4rem 1.5rem;
     }
 
     .modal-title {
@@ -761,7 +766,7 @@ nav_order: 6
 <!-- Modal Container -->
 <div class="modal-container" id="modal-container">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <button class="modal-close" onclick="event.stopPropagation(); closeModal();">&times;</button>
     
     <!-- Navigation between albums -->
     <button class="modal-nav modal-nav-prev" id="modal-prev" onclick="navigateAlbum(-1)">‹</button>
@@ -877,9 +882,16 @@ nav_order: 6
     // Update navigation buttons
     updateModalNavigation();
     
-    // Show modal
-    document.getElementById('modal-overlay').classList.add('active');
-    document.getElementById('modal-container').classList.add('active');
+    // Show modal with smooth animation
+    const overlay = document.getElementById('modal-overlay');
+    const container = document.getElementById('modal-container');
+    
+    overlay.classList.add('active');
+    // Small delay for smooth transition
+    setTimeout(() => {
+      container.classList.add('active');
+    }, 50);
+    
     document.body.style.overflow = 'hidden';
     
     // Recalculate masonry after images load
@@ -887,9 +899,16 @@ nav_order: 6
   }
 
   function closeModal() {
-    document.getElementById('modal-overlay').classList.remove('active');
-    document.getElementById('modal-container').classList.remove('active');
-    document.body.style.overflow = '';
+    const overlay = document.getElementById('modal-overlay');
+    const container = document.getElementById('modal-container');
+    
+    overlay.classList.remove('active');
+    container.classList.remove('active');
+    
+    // Wait for animation to complete before allowing scroll
+    setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 500);
   }
 
   function navigateAlbum(direction) {
