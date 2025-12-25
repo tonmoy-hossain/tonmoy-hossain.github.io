@@ -155,6 +155,8 @@ nav_order: 6
     font-weight: 500;
     margin-bottom: 0.5rem;
     letter-spacing: 0.01em;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 
   .album-meta {
@@ -164,10 +166,12 @@ nav_order: 6
     font-size: 0.95rem;
     opacity: 0.95;
     letter-spacing: 0.05em;
+    color: white;
   }
 
   .album-date {
     font-style: italic;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   }
 
   .album-count {
@@ -711,6 +715,23 @@ nav_order: 6
           </div>
         </div>
       </div>
+
+      <!-- Kos Island Album -->
+      <div class="album-card" onclick="openAlbum('kos-island')">
+        <img src="/assets/img/photography/KosIsland_Greece/IMG_1232.JPEG" alt="Kos Island" class="album-image">
+        <div class="album-info">
+          <h3 class="album-title">Kos Island</h3>
+          <div class="album-meta">
+            <span class="album-date">Greece · Summer 2025</span>
+            <span class="album-count">41 photos</span>
+          </div>
+        </div>
+        <div class="view-indicator">
+          <div class="view-indicator-circle">
+            <span class="view-indicator-text">View</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 2024 -->
@@ -814,6 +835,50 @@ nav_order: 6
         '/assets/img/photography/IMG_3051.JPEG'
       ]
     },
+    'kos-island': {
+      title: 'Kos Island',
+      subtitle: 'Greece · Summer 2025',
+      photos: [
+        '/assets/img/photography/KosIsland_Greece/IMG_1194.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1213.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1216.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1217.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1218.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1223.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1225.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1228.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1230.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1232.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1238.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1239.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1241.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1243.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1247.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1252.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1253.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1254.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1255.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1305.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1312.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1341.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1360.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1373.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1384.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1387.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1389.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1393.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1401.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1409.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1417.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1421.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1425.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1430.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1432.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1436.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1440.JPEG',
+        '/assets/img/photography/KosIsland_Greece/IMG_1443.JPEG'
+      ]
+    },
     'tokyo': {
       title: 'Tokyo',
       subtitle: 'Japan · June 2024',
@@ -845,7 +910,7 @@ nav_order: 6
     }
   };
 
-  const albumOrder = ['santorini', 'tokyo', 'golden-gate'];
+  const albumOrder = ['santorini', 'tokyo', 'kos-island', 'golden-gate'];
   let currentAlbumIndex = 0;
   let currentLightboxImages = [];
   let currentLightboxIndex = 0;
