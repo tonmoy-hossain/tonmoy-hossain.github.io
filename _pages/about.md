@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Graduate Endowed Fellow + Ph.D. Student. @UVA CS
+subtitle: Postdoctoral Research Fellow @ HMS & MGH
 
 profile:
   align: right
@@ -28,7 +28,5 @@ announcements:
 ---
 
 This is Tonmoy Hossain. I am a Postdoctoral Research Fellow at the Athinoula A. Martinos Center for Biomedical Imaging, Harvard Medical School & Massachusetts General Hospital, working with [Prof. Juan Eugenio Iglesias](https://lemon.martinos.org/pi/). I am broadly interested in machine learning and computer vision for healthcare, particularly neuroimaging, where I study how to computationally capture pathology and anatomical structure. To this end, my work spans deep generative modeling, representation learning, and image analysis, with applications to multimodal clinical MRIs, low-field portable imaging, and high-resolution ex vivo scans.
-
-I completed my Ph.D. and M.S. in Computer Science at the University of Virginia, where [Prof. Miaomiao Zhang](https://engineering.virginia.edu/faculty/miaomiao-zhang) advised my work in the MIA Lab and I held the Copenhaver Charitable Trust Bicentennial Fellowship. My doctoral research centered on unifying geometric shape and image texture into cohesive representations for healthcare applications, spanning deformation-based representation learning and topology-preserving generative models for anatomical shape analysis. I have served as a program committee member for CVPR, ICCV, ICML, NeurIPS, ICLR, and MICCAI, and my work has been recognized with a Best Thematic and Proceedings Paper Award at ML4H and Outstanding Reviewer honors at AISTATS and ECCV. Prior to graduate school, I was a Lecturer at Ahsanullah University of Science and Technology in Bangladesh, and I spent a summer as an AI/ML Intern at GE Healthcare during my Ph.D.
 
 I completed my Ph.D. and M.S. in Computer Science at the University of Virginia, where I was advised by [Prof. Miaomiao Zhang](https://engineering.virginia.edu/faculty/miaomiao-zhang) in the MIA Lab and supported by NSF, NIH, and UVA Graduate Fellowship funding. My research there centered on unifying geometric shape and image texture into cohesive representations for healthcare applications, which led me to work on deformation-based representation learning and topology-preserving generative models for anatomical shape analysis. During my doctoral training, my research and service were recognized with the Copenhaver Charitable Trust Bicentennial Fellowship and the department's Graduate Service Award, awarded for my role as CSGSG Co-Chair. I have also served as a program committee member for CVPR, ICCV, ICML, NeurIPS, ICLR, and MICCAI, earning Outstanding Reviewer honors at AISTATS and ECCV. My work has separately been recognized with a Best Thematic and Proceedings Paper Award at ML4H. Before starting graduate school, I was a Lecturer at Ahsanullah University of Science and Technology in Bangladesh, and midway through my Ph.D., I spent a summer as an AI/ML Intern at GE Healthcare.
