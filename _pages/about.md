@@ -9,9 +9,8 @@ profile:
   image: profile_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Rice Hall 328</p>
-    <p>85 Engineer's Way</p>
-    <p>Charlottesville, VA 22903</p>
+    <p>149 13th Street, Suite 2301</p>
+    <p>Charlestown, MA 02129</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
