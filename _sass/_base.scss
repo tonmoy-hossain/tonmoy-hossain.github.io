@@ -49,6 +49,10 @@ table.table a {
   }
 }
 
+.post-content p {
+  text-align: justify;
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {
