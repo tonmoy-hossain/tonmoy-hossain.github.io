@@ -588,7 +588,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%6F%6E%6D%6F%79@%76%69%72%67%69%6E%69%61.%65%64%75", "_blank");
+          window.open("mailto:%74%68%6F%73%73%61%69%6E%33@%6D%67%68.%68%61%72%76%61%72%64.%65%64%75", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -596,13 +596,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/tonmoy-hossain-dihan", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
         id: 'social-scholar',
