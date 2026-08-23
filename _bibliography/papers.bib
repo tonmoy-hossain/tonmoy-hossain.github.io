@@ -3,6 +3,19 @@
 
 @article{hossain2026learning,
 bibtex_show={true},
+  title={Learning To Focus: Anatomy-Guided Attention Regularization for Medical Image Classification},
+  author={Hossain, Tonmoy and Rahman, Atiqur and Swarnali, Farhana Hossain and Zhang, Miaomiao},
+  booktitle={ShapeMI MICCAI 2026: Workshop on Shape in Medical Imaging},
+  journal={arXiv preprint arXiv:2607.10851},
+  year={2026},
+  preview={miccaiShapeMI26.png},
+  selected={true},
+  abstract={Medical image classification models are ideally expected to identify diagnostically relevant regions while making predictions, yet standard classification losses rarely provide spatial supervision. Explicit supervision via anatomical shape information, such as segmentation masks of task-relevant anatomy, has been shown to guide the network toward regions relevant to the target prediction. However, obtaining such masks incurs substantial manual annotation effort and computational overhead. With the advent of segmentation foundation models that exhibit strong localization of anatomical structures across diverse imaging modalities, we leverage this capability to extract anatomical shape priors without the burden of training a dedicated segmentation model. In this paper, we propose a new framework, Locus, an anatomical attention regularization framework that leverages pretrained segmentation foundation models to guide a classifier's attention toward diagnostically meaningful anatomical structures across diverse imaging modalities. Instead of enforcing pixel-wise alignment with the foundation-model-derived mask, we introduce a regularization term that adaptively balances attention between anatomical (foreground) and background regions, penalizing the classifier when background attention dominates. We validate Locus on eight diverse medical imaging datasets spanning dermoscopy, X-ray, histopathology, and cardiac MRI, showing consistent gains in classification performance alongside improved anatomically grounded attention.},
+  abbr={ShapeMI@MICCAI}
+}
+
+@article{hossain2026learning,
+bibtex_show={true},
   title={Learning to Unify Deformable Shape and Texture Representations for Cardiac Video Classification},
   author={Hossain, Tonmoy and Zhang, Miaomiao},
   booktitle={29th International Conference on Medical Image Computing and Computer Assisted Intervention},
