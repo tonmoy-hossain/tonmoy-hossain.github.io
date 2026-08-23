@@ -33,5 +33,5 @@ I completed my Ph.D. and M.S. in Computer Science at the University of Virginia,
 <div class="logo-row">
   <img src="{{ '/assets/img/framed_hms_logo.png' | relative_url }}" alt="Logo 1">
   <img src="{{ '/assets/img/Martinos.png' | relative_url }}" alt="Logo 2">
-  <img src="{{ '/assets/img/mgh.webp' | relative_url }}" alt="Logo 3">
+  <img src="{{ '/assets/img/mgh.png' | relative_url }}" alt="Logo 3">
 </div>
